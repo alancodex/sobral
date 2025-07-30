@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alan Sobral - Currículo</title>
+<title>Alan Sobral - CurrÃ­culo</title>
 <style>
-  /* Reset básico */
+  /* Reset bÃ¡sico */
   * {
     box-sizing: border-box;
   }
@@ -16,6 +16,7 @@
     background: #f7f9fc;
     color: #333;
     line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .container {
@@ -25,6 +26,7 @@
     padding: 2rem 3rem;
     border-radius: 8px;
     box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   header {
@@ -76,7 +78,7 @@
     min-width: 200px;
   }
 
-  /* Educação, Experiência, Certificações */
+  /* EducaÃ§Ã£o, ExperiÃªncia, CertificaÃ§Ãµes */
   .item {
     margin-bottom: 1rem;
   }
@@ -138,9 +140,69 @@
       flex-direction: column;
     }
   }
+
+  /* Tema Escuro */
+  body.dark-mode {
+    background: #121212;
+    color: #ddd;
+  }
+
+  body.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0 0 20px rgb(255 255 255 / 0.1);
+  }
+
+  body.dark-mode header h1,
+  body.dark-mode .item-title {
+    color: #fff;
+  }
+
+  body.dark-mode section h2,
+  body.dark-mode .skill-category h3 {
+    color: #64b5f6; /* azul claro */
+    border-color: #64b5f6;
+  }
+
+  body.dark-mode .item-subtitle {
+    color: #bbb;
+  }
+
+  body.dark-mode .item-date {
+    color: #999;
+  }
+
+  body.dark-mode a {
+    color: #90caf9;
+  }
+
+  body.dark-mode a:hover {
+    text-decoration: underline;
+  }
+
+  /* BotÃ£o de tema */
+  #theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #0077cc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  #theme-toggle:hover {
+    background: #005fa3;
+  }
 </style>
 </head>
 <body>
+  <button id="theme-toggle" aria-label="Alternar tema">Modo Escuro</button>
+
   <div class="container">
     <header>
       <h1>Alan Sobral</h1>
@@ -155,52 +217,52 @@
     </header>
 
     <section>
-      <h2>Educação</h2>
+      <h2>EducaÃ§Ã£o</h2>
 
       <div class="item">
         <div class="item-title">CESAR SCHOOL</div>
-        <div class="item-subtitle">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+        <div class="item-subtitle">TecnÃ³logo em AnÃ¡lise e Desenvolvimento de Sistemas</div>
         <div class="item-date">Ago 2024 - Presente | Recife, PE</div>
       </div>
 
       <div class="item">
-        <div class="item-title">Escola Professora Isaura de França</div>
-        <div class="item-subtitle">Ensino Médio Completo</div>
+        <div class="item-title">Escola Professora Isaura de FranÃ§a</div>
+        <div class="item-subtitle">Ensino MÃ©dio Completo</div>
         <div class="item-date">Fev 2021 - Dez 2023 | Recife, PE</div>
       </div>
     </section>
 
     <section>
-      <h2>Experiência</h2>
+      <h2>ExperiÃªncia</h2>
 
       <div class="item">
         <div class="item-title">CDS Consultoria e Desenvolvimento de Sistemas LTDA.</div>
-        <div class="item-subtitle">Estagiário de Suporte</div>
+        <div class="item-subtitle">EstagiÃ¡rio de Suporte</div>
         <div class="item-date">Set 2024 - Presente | Recife, PE</div>
         <ul>
-          <li>Atuou no suporte ao sistema de gestão da CDS, adquirindo proficiência em SQL Server.</li>
-          <li>Desenvolveu um sistema de execução e monitoramento de queries, com foco em rastreabilidade e segurança.</li>
-          <li>Automatizou consultas críticas e contribuiu para a melhoria da eficiência na análise de dados operacionais.</li>
+          <li>Atuou no suporte ao sistema de gestÃ£o da CDS, adquirindo proficiÃªncia em SQL Server.</li>
+          <li>Desenvolveu um sistema de execuÃ§Ã£o e monitoramento de queries, com foco em rastreabilidade e seguranÃ§a.</li>
+          <li>Automatizou consultas crÃ­ticas e contribuiu para a melhoria da eficiÃªncia na anÃ¡lise de dados operacionais.</li>
         </ul>
       </div>
 
       <div class="item">
-        <div class="item-title">Residência Tecnológica do Porto Digital</div>
-        <div class="item-subtitle">Participante de projeto de inovação digital</div>
+        <div class="item-title">ResidÃªncia TecnolÃ³gica do Porto Digital</div>
+        <div class="item-subtitle">Participante de projeto de inovaÃ§Ã£o digital</div>
         <div class="item-date">Ago 2024 - Nov 2024 | Recife, PE</div>
         <ul>
-          <li>Idealizou um aplicativo de busca por eventos culturais no Recife, promovendo a cultura local e facilitando o acesso a atividades artísticas e sociais.</li>
-          <li>Foco na experiência do usuário e na curadoria de eventos relevantes para ampliar a visibilidade cultural.</li>
+          <li>Idealizou um aplicativo de busca por eventos culturais no Recife, promovendo a cultura local e facilitando o acesso a atividades artÃ­sticas e sociais.</li>
+          <li>Foco na experiÃªncia do usuÃ¡rio e na curadoria de eventos relevantes para ampliar a visibilidade cultural.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-title">Accenture Do Brasil LTDA.</div>
-        <div class="item-subtitle">Desenvolvedor Front-end (em residência)</div>
+        <div class="item-subtitle">Desenvolvedor Front-end (em residÃªncia)</div>
         <div class="item-date">Fev 2025 - Jun 2025 | Recife, PE</div>
         <ul>
-          <li>Integração na equipe de desenvolvimento front-end de chatbot para a Polícia Civil de Pernambuco.</li>
-          <li>Projeto construído com React e API em Python, focado em usabilidade e aplicação prática em serviços públicos.</li>
+          <li>IntegraÃ§Ã£o na equipe de desenvolvimento front-end de chatbot para a PolÃ­cia Civil de Pernambuco.</li>
+          <li>Projeto construÃ­do com React e API em Python, focado em usabilidade e aplicaÃ§Ã£o prÃ¡tica em serviÃ§os pÃºblicos.</li>
         </ul>
       </div>
     </section>
@@ -209,7 +271,7 @@
       <h2>Habilidades</h2>
       <div class="skills-list">
         <div class="skill-category">
-          <h3>Linguagens de Programação</h3>
+          <h3>Linguagens de ProgramaÃ§Ã£o</h3>
           <div class="skill-list-items">SQL, TypeScript, JavaScript, Python</div>
         </div>
         <div class="skill-category">
@@ -218,27 +280,49 @@
         </div>
         <div class="skill-category">
           <h3>Habilidades Pessoais</h3>
-          <div class="skill-list-items">Comunicação eficaz, trabalho em equipe, comunidade, resolução de problemas</div>
+          <div class="skill-list-items">ComunicaÃ§Ã£o eficaz, trabalho em equipe, comunidade, resoluÃ§Ã£o de problemas</div>
         </div>
         <div class="skill-category">
           <h3>Idiomas</h3>
-          <div class="skill-list-items">Português (nativo), Inglês Básico Iniciante</div>
+          <div class="skill-list-items">PortuguÃªs (nativo), InglÃªs BÃ¡sico Iniciante</div>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Certificações</h2>
+      <h2>CertificaÃ§Ãµes</h2>
       <div class="item">
-        <div class="item-title">Informática, D.c Cursos de Informatica e Gestao Profissional</div>
+        <div class="item-title">InformÃ¡tica, D.c Cursos de Informatica e Gestao Profissional</div>
         <div class="item-date">Fev 2021 - Nov 2021</div>
       </div>
       <div class="item">
-        <div class="item-title">Programação Web, Centro De Inclusão Digital eProfissional</div>
+        <div class="item-title">ProgramaÃ§Ã£o Web, Centro De InclusÃ£o Digital eProfissional</div>
         <div class="item-date">Jan 2024 - Jun 2024</div>
       </div>
     </section>
 
   </div>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica se jÃ¡ hÃ¡ preferÃªncia salva no localStorage
+    if(localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleButton.textContent = 'Modo Claro';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')) {
+        toggleButton.textContent = 'Modo Claro';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        toggleButton.textContent = 'Modo Escuro';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
 </body>
 </html>
